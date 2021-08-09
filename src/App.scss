@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+$font: "Lato", sans-serif;
+
+$primary: #639dd3;
+$secondary: #849dc2;
+$white: #f9fbff;
+$dark: #1c6632;
+
+html {
+  display: grid;
+  min-height: 100%;
+}
+
+body {
+  display: grid;
+  background: linear-gradient(to bottom left, $primary 40%, $white 120%);
+  font-family: $font;
+}
+
+.head {
+  text-align: center;
+  transform: translateY(0.5rem);
+}
+.container {
+  position: relative;
+  margin: 12% auto;
+  left: 6%;
+  width: 620px;
+  height: 450px;
+}
+
+.messages {
+  position: absolute;
+  background: $white;
+  opacity: 0.5;
+  width: 30%;
+  height: 85%;
+  top: 2.5%;
+  left: -30%;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -5px 5px 10px rgba($dark, 0.5);
+}
+
+/*chat messages */
+.people {
+  position: relative;
+  list-style-type: none;
+  width: 100%;
+  left: -22%;
+  top: 1%;
+  line-height: 0.7em;
+  .title {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    margin-left: 14px;
+    letter-spacing: 1px;
+    color: $dark;
+  }
+  .time {
+    text-transform: uppercase;
+    font-size: 0.4em;
+    margin-left: 14px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    color: $dark;
+  }
+  .preview {
+    color: #111111;
+    margin-left: 14px;
+    font-size: 0.7em;
+  }
+}
+
+.person {
+  padding: 12px 0 12px 12px;
+  border-bottom: 1px solid $primary;
+  cursor: pointer;
+  &:hover {
+    background: #aadae0;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.chatbox {
+  position: absolute;
+  left: 35%;
+  height: 75%;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba($dark, 0.5);
+}
+
+.top-bar {
+  width: 100%;
+  height: 60px;
+  background: $white;
+  border-radius: 10px 10px 0 0;
+}
+
+.name {
+  position: absolute;
+  top: 22px;
+  text-transform: uppercase;
+  color: $dark;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  font-weight: 500;
+  left: 60px;
+}
+
+.chat {
+  button {
+    transform: translateY(-15%);
+  }
+  button:hover {
+    transform: translateY(-15%) scale(1.1);
+  }
+}
+
+.middle {
+  position: absolute;
+  background: $white;
+  width: 100%;
+  opacity: 0.85;
+  top: 60px;
+  padding-bottom: 25px;
+  height: 69%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.search {
+  position: relative !important;
+  height: 8% !important;
+  width: 90% !important;
+  margin-bottom: 15% !important;
+  margin-top: 5% !important;
+  margin-left: 5%;
+  /*border-radius: 15px 0 0 15px !important;*/
+  background-color: rgba(177, 170, 170, 0.3) !important;
+  border: 0 !important;
+  color: white !important;
+  input {
+    transform: translate(0px, -100%);
+    width: 150% !important;
+  }
+  button {
+    display: none;
+  }
+}
+.incoming {
+  position: relative;
+  padding: 5px 20px;
+  clear: both;
+  .bubble {
+    background: lighten($dark, 23%);
+    float: left;
+    max-width: 40%;
+  }
+}
+
+.block {
+  transform: translateX(-32rem);
+  justify-self: center;
+}
+
+.bubble {
+  position: flex;
+  display: inline-block;
+  margin-bottom: 5px;
+  color: $white;
+  font-size: 0.7em;
+  padding: 10px 10px 10px 12px;
+  border-radius: 20px;
+}
+
+.outgoing {
+  position: relative;
+  padding: 5px 20px;
+  right: 0;
+  clear: both;
+  .bubble {
+    background: $primary;
+    float: right;
+    max-width: 45%;
+  }
+}
+
+.bottom-bar {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  bottom: 0;
+  background: $white;
+}
+
+input {
+  padding: 7px;
+  width: 74%;
+  left: 5%;
+  position: absolute;
+  border: 0;
+  top: 13px;
+  background: $white;
+  color: $primary;
+}
+
+input::placeholder {
+  color: $secondary;
+}
+
+input:focus {
+  color: $dark;
+  outline: 0;
+}
+
+button {
+  position: absolute;
+  border: 0;
+  font-size: 1em;
+  color: $secondary;
+  top: 19px;
+  opacity: 0.8;
+  right: 17px;
+  cursor: pointer;
+  outline: 0;
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    color: $primary;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.7em;
+  padding: 10px;
+  p {
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+@keyframes bounce {
+  30% {
+    transform: translateY(-2px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+}
