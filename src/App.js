@@ -12,13 +12,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { selectConvoName } from "./components/convoState";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyBQ4lnhpOV4T1U7IkAHMLagH47sLRKcDuE",
-  authDomain: "chat-app-467eb.firebaseapp.com",
-  projectId: "chat-app-467eb",
-  storageBucket: "chat-app-467eb.appspot.com",
-  messagingSenderId: "184429127568",
-  appId: "1:184429127568:web:86eda818bdce20e72d7515",
-  measurementId: "G-952KS2QW9T",
+  //your config
 });
 
 const auth = firebase.auth();
