@@ -5,4 +5,4 @@ npm install
 
 npm start
 ```
-Here's a [live demo][https://my-react-chat-app-test.netlify.app/]
+Here's a [live demo](https://my-react-chat-app-test.netlify.app/)
